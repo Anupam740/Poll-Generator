@@ -1,0 +1,5 @@
+#GeneratePolls{
+    height: 100vh;
+    text-align: center;
+    background-image: linear-gradient(to bottom, black, black, gray 800); width: 1200px;
+}

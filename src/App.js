@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import "./App.css"
+import { Routes, Route } from 'react-router-dom';
+import GeneratePolls from './components/GeneratePolls';
+import PollList from './components/PollList';
+import Home from './components/Home';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <div id='App' className="  w-full bg-gradient-to-b from-black via-black to-gray-800 " >
+      <NavBar/>
+      
+    
+      <Routes>
+    <Route path="/" elememt={<Home/>} />
+      <Route exact path="/generatepolls" element={<GeneratePolls/>} />
+      <Route path="/polllist" element={<PollList/>} />
+      </Routes>
+    
+    
+   
+    
+  </div>
+        
+    
   );
 }
 
